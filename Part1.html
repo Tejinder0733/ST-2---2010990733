@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+    .container{
+        width: 762px;
+    }
+    h3{
+        /* text-align: center; */
+        background-color: #20c997;
+        margin-top: 0;
+        padding: 17px;
+        color: #fff;
+    }
+    body{
+        background-color: rgba(49, 208, 208, 0.708);
+    }
+    form{
+        margin-top: 25px;
+    }
+    .back{
+        background-color: #fff;
+    }
+    .btn{
+        margin-right: 10px;
+    }
+    .right{
+        margin-bottom: 10px;
+    }
+    label{
+        font-size: 15px;
+    }
+    input[type="radio"]{
+        margin-right: 6px;
+        margin-left: 5px;
+    }
+    
+    
+
+</style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row back">
+            <h3 >All Fields are Mandatory</h3>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-8 reg">
+                <form action="#" onsubmit="return validation()" class="form-horizontal hr">
+
+                    <!-- first name -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Firstname</label>
+                        <div class="col-sm-8 right">
+                            <input type="text" name="firstname" id="fname" class="form-control" autocomplete="off">
+                            <span id="fnamespan" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <!-- Lastname -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Lastname</label>
+                        <div class="col-sm-8 right">
+                            <input type="text" name="lastname" id="lname" class="form-control" autocomplete="off">
+                            <span id="lnamespan" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <!-- gender  -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Gender</label>
+                        <div class="col-sm-8 right">
+                            <input type="radio" name="gender" id="male">Male
+                            <input type="radio" name="gender" id="male">Female
+                        </div>
+                    </div>
+
+                    <!-- address  -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Address</label>
+                        <div class="col-sm-8 right">
+                            <textarea name="address" id="address" cols="30" rows="4" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Country  -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Country</label>
+                        <div class="col-sm-8 right">
+                            <select name="country" id="country" class="form-control">
+                                <option value="India">India</option>
+                                <option value="usa">U.S.A</option>
+                                <option value="canada">Canada</option>
+                                <option value="germany">Germany</option>
+                                <option value="australia">Australia</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Mobile  -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Mobile No.</label>
+                        <div class="col-sm-8 right">
+                            <input type="number" name="mobilenumber" id="mobnum" class="form-control" autocomplete="off">
+                            <span id="mobnumspan" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <!-- email  -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Email</label>
+                        <div class="col-sm-8 right">
+                            <input type="email" name="email" id="email" class="form-control" autocomplete="off">
+                            <span id="emailspan" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <!-- password  -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Password</label>
+                        <div class="col-sm-8 right">
+                            <input type="password" name="password" id="pass" class="form-control" autocomplete="off">
+                            <span id="passspan" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <!-- confirm password  -->
+                    <div class="form-group">
+                        <label for="" class="control-label col-sm-4" style="text-align: left;">Confirm Password</label>
+                        <div class="col-sm-8 right">
+                            <input type="password" name="confirmpassword" id="conpass" class="form-control" autocomplete="off">
+                            <span id="conpassspan" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8 right">
+                            <!-- <a href="Fa22.html"><input type="button" value="Submit" class="btn-primary btn" onclick="validation()"></a> -->
+                            <input type="button" value="Submit" class="btn-primary btn" onclick="validation()">
+                            <input type="reset" name="" id="" value="Reset" class="btn-primary btn" >
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="col-sm-2">
+                <p id="P_tag"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        function Redirect() {
+               window.location = "Part2.html";
+            }
+        function validation(){
+
+            var v_fname = document.getElementById('fname').value;
+            var v_lname = document.getElementById('lname').value;
+            var v_mobnum = document.getElementById('mobnum').value;
+            var v_email = document.getElementById('email').value;
+            var v_pass = document.getElementById('pass').value;
+            var v_conpass = document.getElementById('conpass').value;
+
+            // for first name -------------------
+            if(v_fname == ""){
+                document.getElementById('fnamespan').innerHTML = "**Please enter the First Name.";
+                return false;
+            }
+            else{
+                document.getElementById('fnamespan').innerHTML = "";
+
+            }
+            if(v_fname.length <= 2 || v_fname.length > 20){
+                document.getElementById('fnamespan').innerHTML = "**Enter the name between the lenght of 2-20.";
+                return false;
+            }
+            else{
+                document.getElementById('fnamespan').innerHTML = "";
+
+            }
+            if(!isNaN(v_fname)){
+                document.getElementById('fnamespan').innerHTML = "**Numbers are not allowed.";
+                return false;
+            }
+            else{
+                document.getElementById('fnamespan').innerHTML = "";
+
+            }
+
+
+
+            // for last name -----------------------
+            if(v_lname == ""){
+                document.getElementById('lnamespan').innerHTML = "**Please enter the Last Name";
+                return false;
+            }
+            else{
+                document.getElementById('lnamespan').innerHTML = "";
+
+            }
+            if(v_lname.length <= 2 || v_lname.length > 20){
+                document.getElementById('lnamespan').innerHTML = "**Enter the name between the lenght of 2-20.";
+                return false;
+            }
+            else{
+                document.getElementById('lnamespan').innerHTML = "";
+
+            }
+            if(!isNaN(v_lname)){
+                document.getElementById('lnamespan').innerHTML = "**Numbers are not allowed.";
+                return false;
+            }
+            else{
+                document.getElementById('lnamespan').innerHTML = "";
+
+            }
+
+
+            // for mobile number -------------------
+            if(v_mobnum == ""){
+                document.getElementById('mobnumspan').innerHTML = "**Please enter the Mobile Number";
+                return false;
+            }
+            else{
+                document.getElementById('mobnumspan').innerHTML = "";
+
+            }
+            if(v_mobnum.length!=10){
+                document.getElementById('mobnumspan').innerHTML = "**Mobile Number must of 10 digits";
+                return false;
+            }
+            else{
+                document.getElementById('mobnumspan').innerHTML = "";
+
+            }
+
+
+
+
+            // for email ----------------------------
+            if(v_email == ""){
+                document.getElementById('emailspan').innerHTML = "**Please enter the Email Address";
+                return false;
+            }
+            else{
+                document.getElementById('emailspan').innerHTML = "";
+
+            }
+            if(v_email.indexOf('@') <= 0){
+                document.getElementById('emailspan').innerHTML = "**Invalid @";
+                return false;
+            }
+            else{
+                document.getElementById('emailspan').innerHTML = "";
+
+            }
+            if((v_email.charAt(v_email.length-4) != '.') && (v_email.charAt(v_email.length-3) != '.')){
+                document.getElementById('emailspan').innerHTML = "**Enter a valid email with .com, .edu, .in";
+                return false;
+            }
+            else{
+                document.getElementById('emailspan').innerHTML = "";
+
+            }
+
+
+            // for password ----------------------
+            if(v_pass == ""){
+                document.getElementById('passspan').innerHTML = "**Please enter the Password";
+                return false;
+            }
+            else{
+                document.getElementById('passspan').innerHTML = "";
+
+            }
+            if(v_pass.length <= 5){
+                document.getElementById('passspan').innerHTML = "**Password length must be greater than 5.";
+                return false;
+            }
+            else{
+                document.getElementById('passspan').innerHTML = "";
+
+            }
+
+
+
+
+            // for confirm password ----------------
+            if(v_conpass == ""){
+                document.getElementById('conpassspan').innerHTML = "**Please enter the Password";
+                return false;
+            }
+            else{
+                document.getElementById('conpassspan').innerHTML = "";
+
+            }
+            if(v_pass!=v_conpass){
+                document.getElementById('conpassspan').innerHTML = "**Passwords are not matching";
+                return false;
+            }
+            else{
+                document.getElementById('conpassspan').innerHTML = "";
+                
+                localStorage.setItem('fname', v_fname);
+                localStorage.setItem('lname', v_lname);
+                localStorage.setItem('mobnum', v_mobnum);
+                localStorage.setItem('email', v_email);
+                Redirect();
+                // alert("First Name = "+v_fname+"\nLast Name = "+v_lname+"\nMobile No.= "+v_mobnum+"\nEmail = "+v_email);
+                // document.getElementById("P_tag").innerHTML="First Name = "+localStorage.getItem("fname")+"\nLast Name = "+localStorage.getItem("lname")+"\nMobile No.= "+localStorage.getItem("mobnum")+"\nEmail = "+localStorage.getItem("email");
+
+            }
+
+
+            // var v_fname = document.getElementById('fname').value;
+            // var v_lname = document.getElementById('lname').value;
+            // var v_mobnum = document.getElementById('mobnum').value;
+            // var v_email = document.getElementById('email').value;
+            // var v_pass = document.getElementById('pass').value;
+            // var v_conpass = document.getElementById('conpass').value;
+
+            
+
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
